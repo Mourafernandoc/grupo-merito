@@ -1,38 +1,45 @@
+/* Ajustes gerais */
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     color: #333;
+    overflow-x: hidden; /* Previne scroll horizontal indesejado */
 }
 
+/* Melhorias no header e navegação */
 header {
     background-color: #1a1a1a;
     color: #ffd700;
     padding: 10px 0;
+    width: 100%;
+    position: relative;
 }
 
 nav ul {
     list-style-type: none;
     padding: 0;
     text-align: center;
+    margin: 0;
 }
 
-nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
-
+/* Ajustes na seção hero */
 .hero {
     background-color: #f0f0f0;
-    padding: 50px 0;
+    padding: 30px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .hero-text {
     width: 50%;
-    padding-left: 5%;
+    padding: 0 20px;
 }
 
 .hero-image {
@@ -40,27 +47,43 @@ nav ul li {
     text-align: right;
 }
 
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Melhorias na seção de features */
 .features {
     display: flex;
     justify-content: space-around;
-    padding: 30px 0;
+    padding: 30px 20px;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .feature-item {
     text-align: center;
     width: 30%;
+    min-width: 250px;
 }
 
+.feature-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Ajustes na seção de parceiros */
 .partners {
     background-color: #1a1a1a;
     color: white;
-    padding: 20px 0;
+    padding: 40px 20px;
     text-align: center;
+    width: 100%;
 }
 
 .partners h2 {
     color: #fff;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .partners-logos {
@@ -68,88 +91,132 @@ nav ul li {
     justify-content: center;
     align-items: center;
     gap: 40px;
-    flex-wrap: wrap; /* Permite que os logos quebrem para a próxima linha */
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
 }
 
 .partners-logos img {
-    width: 120px;
-    height: auto;
+    height: 50px; /* Altura fixa para manter proporção */
+    width: auto; /* Largura automática para manter aspecto */
     object-fit: contain;
     filter: brightness(0) saturate(100%) invert(93%) sepia(18%) saturate(7075%) hue-rotate(359deg) brightness(107%) contrast(107%);
-    margin: 10px; /* Adiciona margem para espaçamento quando em múltiplas linhas */
+    transition: transform 0.3s ease;
 }
 
 .about {
     padding: 50px 5%;
     background-color: #f0f0f0;
-}
-
-.contact {
+    text-align: center; /* Centraliza o texto */
     display: flex;
-    justify-content: space-between;
-    padding: 50px 5%;
+    flex-direction: column;
+    align-items: center; /* Centraliza elementos flex */
+    justify-content: center;
+    max-width: 1200px; /* Limita a largura máxima */
+    margin: 0 auto; /* Centraliza o container na página */
 }
 
-footer {
-    background-color: #ffd700;
-    padding: 20px 5%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.about p {
+    max-width: 800px; /* Limita a largura do texto para melhor leitura */
+    margin: 0 auto; /* Centraliza o parágrafo */
+    line-height: 1.6; /* Melhora a legibilidade */
 }
 
+/* Media Queries melhoradas */
 @media (max-width: 768px) {
+    .about {
+        padding: 30px 20px;
+    }
+
+    .about p {
+        max-width: 100%;
+        padding: 0 15px;
+    }
+    
     .hero {
         flex-direction: column;
-        text-align: center;
+        padding: 20px;
     }
 
     .hero-text, .hero-image {
         width: 100%;
-        padding: 0 5%;
-    }
-
-    .features {
-        flex-direction: column;
-        align-items: center;
+        padding: 10px;
     }
 
     .feature-item {
-        width: 80%;
-        margin-bottom: 20px;
-    }
-
-    .contact {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .contact > div {
         width: 100%;
-        margin-bottom: 20px;
+        max-width: 400px;
+        margin: 0 auto 20px;
     }
 
-    footer {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    footer > div {
-        margin-bottom: 20px;
-    }
-}
-
-@media (max-width: 480px) {
     .partners-logos {
-        flex-direction: column;
+        gap: 30px;
+        padding: 15px;
     }
 
     .partners-logos img {
-        margin: 10px 0;
+        height: 40px;
+    }
+
+    .contact {
+        padding: 20px;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .partners{
+        padding: 30px 15px;
+    }
+    
+    
+    .partners-logos {
+        gap: 25px;
+    }
+
+    .partners-logos img {
+        height: 35px;
     }
 
     nav ul li {
         display: block;
         margin: 10px 0;
     }
+
+    .hero {
+        padding: 15px;
+    }
+
+    .contact {
+        padding: 15px;
+    }
+}
+
+/* Novas adições para melhor responsividade */
+.contact {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 30px 5%;
+}
+
+.contact-form {
+    flex: 1;
+    min-width: 300px;
+}
+
+.contact-info {
+    flex: 1;
+    min-width: 300px;
+}
+
+footer {
+    background-color: #ffd700;
+    padding: 20px 5%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
 }
