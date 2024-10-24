@@ -147,8 +147,7 @@ nav ul {
     }
 
     .hero-image img {
-        max-width: 80%;
-        margin: 0 auto;
+        max-width: 120px;
     }
 
     .feature-item {
@@ -240,7 +239,7 @@ nav ul {
     min-width: 300px;
 }
 
-/*footer {
+footer {
     background-color: #ffd700;
     padding: 20px 5%;
     display: flex;
