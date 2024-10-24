@@ -50,6 +50,7 @@ nav ul {
 .hero-image img {
     max-width: 100%;
     height: auto;
+    object-fit: contain;
 }
 
 /* Melhorias na seção de features */
@@ -136,12 +137,18 @@ nav ul {
     
     .hero {
         flex-direction: column;
-        padding: 20px;
+        padding: 30px 15px;
     }
 
     .hero-text, .hero-image {
         width: 100%;
+        text-align: center;
         padding: 10px;
+    }
+
+    .hero-image img {
+        max-width: 80%;
+        margin: 0 auto;
     }
 
     .feature-item {
@@ -161,6 +168,16 @@ nav ul {
 
     .contact {
         padding: 20px;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    footer img {
+        max-width: 120px;
     }
 
 }
@@ -188,8 +205,20 @@ nav ul {
         padding: 15px;
     }
 
+    .hero-image img {
+        max-width: 90%;
+    }
+
     .contact {
         padding: 15px;
+    }
+
+    footer {
+        padding: 15px;
+    }
+
+    footer img {
+        max-width: 100px;
     }
 }
 
@@ -211,12 +240,16 @@ nav ul {
     min-width: 300px;
 }
 
-footer {
+/*footer {
     background-color: #ffd700;
     padding: 20px 5%;
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
     justify-content: space-between;
     align-items: center;
+}
+
+footer img{
+    max-width: 150px;
+    height: auto;
+    object-fit: contain;
 }
