@@ -8,8 +8,12 @@
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
+        <nav >
+            <button id="menu-toggle">
+                <span class="hamburger">&#9776;</span> Menu
+                
+            </button>
+            <ul id="menu">
                 <li>Home</li>
                 <li>Quem somos</li>
                 <li>Fale conosco</li>
@@ -63,15 +67,15 @@
         </section>
 
         <section class="contact">
-            <div>
-                <h2>Fale conosco</h2>
+            <div class="container">                
                 <form>
-                    <input type="email" placeholder="E-mail">
+                    <h2>Fale conosco</h2>
+                    <input type="email" placeholder="E-mail">                    
                     <input type="tel" placeholder="Telefone">
                     <button type="submit">Enviar</button>
                 </form>
             </div>
-            <div>
+            <div class="image-container">
                 <img src="images/pessoas_analisando_grafico-350x350.jpg" alt="Pessoa analisando gráficos">
             </div>
         </section>
@@ -91,5 +95,6 @@
             <p>QS 614 CONJUNTO E LOTE 5 SAMAMBAIA-DF</p>
         </div>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>

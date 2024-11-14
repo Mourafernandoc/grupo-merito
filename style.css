@@ -1,6 +1,45 @@
+/* ajustes da responsividade*/
+
+
+/* esta alterando a hero caso queira testar 
+main {
+    max-width: 1200px;
+    margin: 0 auto; 
+    padding: 0px;
+}*/
+
+
+/*.features, .partners, .about, .contact {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}*/
+
+@media (max-width: 768px) {
+    .features, .partners, .about, .contact {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+
 /* Ajustes gerais */
 * {
     box-sizing: border-box;
+}
+
+h1{
+    display: flex;
+    text-align: center;
+    justify-content: center; /* Centraliza horizontalmente */
+    margin: 0; /* Remove margens do body */
+
 }
 
 body {
@@ -11,13 +50,63 @@ body {
     overflow-x: hidden; /* Previne scroll horizontal indesejado */
 }
 
-/* Melhorias no header e navegação */
-header {
-    background-color: #1a1a1a;
-    color: #ffd700;
-    padding: 10px 0;
-    width: 100%;
-    position: relative;
+/* Estilo para o menu em telas maiores */
+header{
+    background-color: black;
+    padding: 20px;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 20px;
+    justify-content: center;
+}
+
+header nav ul li {
+    color: yellow;
+    cursor: pointer;
+}
+
+/* Oculta o botão sanduíche em telas maiores */
+#menu-toggle {
+    display: none;
+}
+
+/* Estilo para telas menores */
+@media (max-width: 768px) {
+    /* Oculta o menu inicialmente em telas pequenas */
+    #menu {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+        background-color: black;
+        position: absolute;
+        top: 50px;
+        width: 100%;
+        padding: 20px 0;
+        transition: transform 0.3s ease-in-out;
+        transform: translateY(-100%);
+    }
+
+    /* Exibe o botão sanduíche */
+    #menu-toggle {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 24px;
+        color: yellow;
+        cursor: pointer;
+    }
+
+    /* Exibe o menu quando o botão é clicado */
+    #menu.show {
+        display: flex;
+        transform: translateY(0);
+    }
 }
 
 nav ul {
@@ -85,6 +174,7 @@ nav ul {
 .partners h2 {
     color: #fff;
     margin-bottom: 30px;
+    
 }
 
 .partners-logos {
@@ -205,7 +295,7 @@ nav ul {
     }
 
     .hero-image img {
-        max-width: 90%;
+        max-width: 100%;
     }
 
     .contact {
@@ -238,6 +328,22 @@ nav ul {
     flex: 1;
     min-width: 300px;
 }
+
+.container {
+    display: flex;
+    justify-content: space-between; /* Alinha os itens de maneira que o espaço seja distribuído entre eles */
+    align-items: center; /* Alinha os itens verticalmente */
+    margin-left: 20%;
+}
+
+.input-container {
+    margin-right: 20px; /* Adiciona um espaço à direita das divs de input */
+}
+
+.image-container {
+    margin-left: 10%;
+}
+
 
 footer {
     background-color: #ffd700;
