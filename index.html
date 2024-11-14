@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Serviços Financeiros Online</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <header>
-        <nav >
+        <nav>
             <button id="menu-toggle">
                 <span class="hamburger">&#9776;</span> Menu
-                
+
             </button>
             <ul id="menu">
                 <li>Home</li>
@@ -55,22 +57,23 @@
                 <img src="images/brb-banco-de-brasilia-amarelo.png" alt="BRB Logo">
                 <img src="images/lecca-amarela-sem-fundo.png" alt="lecca_FINAL">
                 <img src="images/Logo-Capital-amarelo.png" alt="lecca_FINAL">
-            </div>    
+            </div>
         </section>
 
         <section class="about">
             <h2>Sobre nós</h2>
             <p>No Grupo Mérito, somos mais que uma empresa de serviços financeiros. </p>
-            <p>Somos parceiros dedicados a tornar realidade os sonhos dos nossos clientes. </p> 
-            <p>Uma equipe experiente e comprometida, oferecemos soluções personalizadas em empréstimos, consignações, financiamentos e crédito,</p>
+            <p>Somos parceiros dedicados a tornar realidade os sonhos dos nossos clientes. </p>
+            <p>Uma equipe experiente e comprometida, oferecemos soluções personalizadas em empréstimos, consignações,
+                financiamentos e crédito,</p>
             <p>entre outros serviços financeiros.</p>
         </section>
 
         <section class="contact">
-            <div class="container">                
+            <div class="container">
                 <form>
                     <h2>Fale conosco</h2>
-                    <input type="email" placeholder="E-mail">                    
+                    <input type="email" placeholder="E-mail">
                     <input type="tel" placeholder="Telefone">
                     <button type="submit">Enviar</button>
                 </form>
@@ -80,6 +83,20 @@
             </div>
         </section>
     </main>
+    <!-- Bolinha do chat -->
+    <div id="chat-icon" onclick="toggleChat()">💬</div>
+
+    <!-- Contêiner do chat -->
+    <div id="chat-container" style="display: none;">
+        <div class="chat-box" id="chat-box">
+            <!-- As mensagens aparecerão aqui -->
+        </div>
+        <form id="chat-form">
+            <input type="text" id="chat-input" placeholder="Digite sua mensagem..." autocomplete="off">
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+
 
     <footer>
         <div>
@@ -97,4 +114,5 @@
     </footer>
     <script src="script.js"></script>
 </body>
+
 </html>
